@@ -1,4 +1,4 @@
-module fr.isika.cda24.TPAnnuaire2.TPAnnuaire2 {
+module JavaGitGo {
     requires javafx.controls;
     exports fr.isika.cda24.TPAnnuaire;
 }

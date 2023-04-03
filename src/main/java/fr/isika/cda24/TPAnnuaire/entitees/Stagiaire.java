@@ -6,12 +6,24 @@ public class Stagiaire {
 
 	// attributs 
 	
-	public final static int TAILLE_NOM_Caracteres = 22;
-	public final static int TAILLE_Prenom_Caracteres = 22;
+	public final static int TAILLE_NOM_Caracteres = 21;
+	public final static int TAILLE_Prenom_Caracteres = 20;
 	public final static int TAILLE_Dpt_Caracteres = 2;
-	public final static int TAILLE_promo_Caracteres = 10;
+	public final static int TAILLE_promo_Caracteres = 11;
 	public final static int TAILLE_annee_Caracteres = 4;
+	
+	public final static int TAILLE_NOM_OCTETS = TAILLE_NOM_Caracteres*2;
+	public final static int TAILLE_Prenom_OCTETS = TAILLE_Prenom_Caracteres*2;
+	public final static int TAILLE_Dpt_OCTETS = TAILLE_Dpt_Caracteres*2;
+	public final static int TAILLE_promo_OCTETS = TAILLE_promo_Caracteres*2;
+	public final static int TAILLE_annee_OCTETS =TAILLE_annee_Caracteres*2;
+	
+	
+	
+	
+	public final static int TAILLE_Stagiaires_Octets = (TAILLE_NOM_Caracteres+TAILLE_Prenom_Caracteres+TAILLE_Dpt_Caracteres+TAILLE_promo_Caracteres+TAILLE_annee_Caracteres)*2;
 
+	
 	private String nom;
 	private String prenom;
 	private String departement;
@@ -35,6 +47,13 @@ public class Stagiaire {
 		}
 		return PrenomLong;
 	}
+	
+	public String getPromoLong() {
+		String PromoLong = this.promo;
+		for(int i = this.promo.length(); i < TAILLE_promo_Caracteres; i++) {
+			PromoLong += "*";
+		}
+		return PromoLong;}
 	
 	public String getDptLong() {
 		String DptLong = this.departement;
@@ -64,6 +83,10 @@ public class Stagiaire {
 
 		//getter et setter 
 		
+		public Stagiaire() {
+			super();
+		}
+
 		@Override
 		public String toString() {
 			return "Stagiaire [nom=" + nom + ", prenom=" + prenom + ", departement=" + departement + ", promo=" + promo
@@ -109,6 +132,8 @@ public class Stagiaire {
 		public void setAnnee(String annee) {
 			this.annee = annee;
 		}
+
+	
 		
 
 }

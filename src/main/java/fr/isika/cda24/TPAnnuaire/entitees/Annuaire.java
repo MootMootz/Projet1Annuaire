@@ -15,7 +15,7 @@ public class Annuaire {
 		List<Stagiaire> laListeDeStagiaire = new ArrayList<>();
 
 		try {
-			File myObj = new File("src/fr/isika/cda24/annuaire/doc/STAGIAIRES.DON");
+			File myObj = new File("src/main/java/fr/isika/cda24/TPAnnuaire/doc/STAGIAIRES.DON");
 			Scanner myReader = new Scanner(myObj);
 
 			int ligneIteration = 1;
